@@ -111,11 +111,8 @@ export default function Home() {
     //   </div>
     // </main>
     <>
-    <div>
-      <h1 className="mb-3 text-2xl font-semibold">Hello World!!!</h1>
-    </div>
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Map/>
+      <Map position={[22.416724, -83.700273]} zoom={10}/>
     </div>
     </>
   );

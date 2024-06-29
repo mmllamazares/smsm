@@ -7,14 +7,14 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 export default function MyMap(props: any) {
   const { position, zoom } = props
 
-  return <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+  return <MapContainer center={position} zoom={zoom} scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[51.505, -0.09]}>
+    <Marker position={position}>
       <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
+        Pinar del Río. <br /> Cuba
       </Popup>
     </Marker>
   </MapContainer>
