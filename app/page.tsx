@@ -6,6 +6,10 @@ import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('@/components/Map'), {ssr: false})
 
 export default function Home() {
+  const imageStyle = {
+  borderRadius: '50%',
+  border: '1px solid #fff',
+}
   return (
     <>
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
