@@ -9,7 +9,7 @@ export default function MyMap({ position, zoom }: PropsMap) {
   return (
     <MapContainer center={position} zoom={zoom} scrollWheelZoom={true}>
       <TileLayer
-        // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
