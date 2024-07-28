@@ -2,8 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 
 :root {
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(../Fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../Fonts/Roboto-Regular.ttf);
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+>>>>>>> mmllamazares
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -25,8 +53,9 @@
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
 
+<<<<<<< HEAD
 .leaflet-container {
   height: 100vh;
   width: 100%;
@@ -35,3 +64,5 @@
 .leaflet-control {
   user-select: none;
 }
+=======
+>>>>>>> mmllamazares
