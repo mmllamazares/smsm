@@ -1,6 +1,7 @@
 // import Image from "next/image";
 // import Map from "../components/Map";
 
+import { Button } from '@/components/Button/Button';
 import dynamic from 'next/dynamic';
 
 const Map = dynamic(() => import('@/components/Map'), {ssr: false})
@@ -12,8 +13,12 @@ export default function Home() {
 }
   return (
     <>
-    <div className="min-h-screen w-screen">
+    <div className="min-h-screen w-screen relative">
+      
+      <Button/>
       <Map position={[22.416724, -83.700273]} zoom={9.3}/>
+      
+      
     </div>
     </>
   );
