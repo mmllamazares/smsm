@@ -12,7 +12,7 @@ export default function Home() {
 }
   return (
     <>
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className="min-h-screen w-screen">
       <Map position={[22.416724, -83.700273]} zoom={9.3}/>
     </div>
     </>
