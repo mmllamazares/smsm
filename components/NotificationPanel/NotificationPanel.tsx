@@ -1,11 +1,13 @@
+'use client'
 import React from 'react'
 import Notification from '../Notification/Notification'
 import { MdNotifications, MdClose } from "react-icons/md"
 import { fails } from '@/utils/fails'
 
-const NotificationPanel = () => {
+const NotificationPanel = ({isActive, handleClick}:any) => {
+ 
   return (
-    <div className='right-0 z-20 absolute flex flex-col bg-secondary-blue w-96 h-screen'>
+    <div className={`absolute ${isActive ? "invisible" : ""} right-0 h-screen w-96 bg-secondary-blue flex flex-col z-20`}>
       <div className='relative h-screen'>
         <h2 className='flex justify-center items-center m-6 font-Roboto-Bold text-2xl text-blanco text-center'><MdNotifications /> Notificaciones</h2>
         <div className='h-[calc(100vh-160px)] overflow-y-scroll'>
@@ -16,7 +18,7 @@ const NotificationPanel = () => {
           }
         </div>
         <div className='right-0 bottom-0 absolute flex justify-between m-4 w-[92%]'>
-          <button className='w-12 h-12 font-Roboto-Bold text-blanco'><MdClose size={"2em"} /></button>
+          <button className='w-12 h-12 text-blanco font-Roboto-Bold' onClick={handleClick}><MdClose size={"2em"}/></button>
           <button className='w-32 h-12 font-Roboto-Bold text-blanco'>Limpiar Todo</button>
         </div>
       </div>
