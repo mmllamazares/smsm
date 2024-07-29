@@ -20,7 +20,7 @@ const Notification = (fail: FailDetected) => {
           } onClick={(e) => {
             setShowDetails(!showDetails)
           }}><FcCollapse /></button>
-          <button className='flex justify-center items-center place-content-end bg-red-500 hover:bg-white rounded w-6 h-6 text-blanco hover:text-red-500 duration-200'><MdClose /></button>
+          <button className='flex justify-center items-center place-content-end bg-red-500 hover:bg-white rounded w-6 h-6 text-blanco hover:text-red-500'><MdClose /></button>
         </div>
       </div>
       {
