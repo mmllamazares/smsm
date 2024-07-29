@@ -31,11 +31,11 @@
 }
 
 /* Zoom buttons */
-.leaflet-control-zoom {
+/* .leaflet-control-zoom {
   position: relative;
   top: 60px;
   left: 15px;
-}
+} */
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
