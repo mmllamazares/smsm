@@ -24,6 +24,10 @@ const config: Config = {
         "gris":"#798b9d",
         "blanco": "#f3f5f1",
         "extra": "#aca4b0"
+      },
+      fontFamily:{
+        "Roboto-Bold": ['Roboto-Bold'],
+        "Roboto-Regular": ['Roboto-Regular']
       }
     },
   },

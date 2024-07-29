@@ -15,6 +15,16 @@
   
 }
 
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(../Fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../Fonts/Roboto-Regular.ttf);
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
