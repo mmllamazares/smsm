@@ -1,11 +1,42 @@
-import React from 'react'
-import { MdClose } from "react-icons/md";
+"use client"
+import { MdClose, MdLocationOn, MdOutlineWarning } from "react-icons/md"
+import { FcCollapse } from "react-icons/fc"
+import { useState } from "react"
+import { FailDetected } from "@/utils/types.dev"
 
-const Notification = () => {
+const Notification = (fail: FailDetected) => {
+  const [showDetails, setShowDetails] = useState(false)
+  const { id, name, location, cause, dateDetection, priority } = fail
   return (
-    <div className='m-4 p-2 border-blanco border-2 text-blanco shadow-md flex items-start font-Roboto-Regular'>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, asperiores!</p>
-        <button className='text-blanco'><MdClose/></button>
+    <div className='box-border flex flex-col border-2 shadow-md m-4 px-4 py-2 border-blanco rounded h-auto font-Roboto-Regular text-white'>
+      <div className="flex justify-between items-center w-full">
+        <div className='flex justify-between items-center w-4/5'>
+          <MdOutlineWarning className='text-2xl text-primary-yellow' />
+          <p className='w-full'>{id} {name}</p>
+        </div>
+        <div className="flex justify-between items-center w-1/5">
+          <button className={
+            showDetails ? "text-white" : "text-white rotate-180"
+          } onClick={(e) => {
+            setShowDetails(!showDetails)
+          }}><FcCollapse /></button>
+          <button className='flex justify-center items-center place-content-end bg-red-500 hover:bg-white rounded w-6 h-6 text-blanco hover:text-red-500 duration-200'><MdClose /></button>
+        </div>
+      </div>
+      {
+        // Fail's details
+        showDetails && <div className="p-3 w-full h-full">
+          <h2 className="font-bold text-xl">Falla</h2>
+          <hr />
+          <div className="flex justify-between">
+            <p>Ubicacion: {location}</p>
+            <button className="flex justify-center items-center hover:bg-primary-blue rounded w-7 h-7 duration-200"><MdLocationOn /></button>
+          </div>
+          <p>Causa: {cause}</p>
+          <p>Fecha: {dateDetection}</p>
+          <p>Prioridad: {priority}</p>
+        </div>
+      }
     </div>
   )
 }
