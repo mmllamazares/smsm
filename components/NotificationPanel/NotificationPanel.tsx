@@ -18,7 +18,7 @@ const NotificationPanel = ({isActive, handleClick}:any) => {
           }
         </div>
         <div className='right-0 bottom-0 absolute flex justify-between m-4 w-[92%]'>
-          <button className='w-12 h-12 text-blanco font-Roboto-Bold' onClick={handleClick}><MdClose size={"2em"}/></button>
+          <button className='w-12 h-12 font-Roboto-Bold text-blanco' onClick={handleClick}><MdClose size={"2em"}/></button>
           <button className='w-32 h-12 font-Roboto-Bold text-blanco'>Limpiar Todo</button>
         </div>
       </div>
