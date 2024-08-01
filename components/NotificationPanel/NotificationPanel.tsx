@@ -7,8 +7,10 @@ import { fails } from '@/utils/fails'
 const NotificationPanel = ({ isActive, handleClick }: any) => {
 
   return (
-    <div className={`absolute w-full h-screen ${isActive ? "invisible" : ""} z-20`} onClick={handleClick}>
-      <div className={`absolute ${isActive ? "invisible" : ""} right-0 h-screen w-96 bg-secondary-blue flex flex-col z-20`}>
+    <div className={`absolute w-full h-screen ${isActive ? "invisible" : ""} z-10`} onClick={handleClick}>
+      <div className={`absolute ${isActive ? "invisible" : ""} right-0 h-screen w-96 bg-secondary-blue flex flex-col z-20`} onClick={(e: any) => {
+        e.stopPropagation()
+      }}>
         <div className='relative h-screen'>
           <h2 className='flex justify-center items-center m-6 font-Roboto-Bold text-blanco text-center ext-2xl'><MdNotifications /> Notificaciones</h2>
           <div className='h-[calc(100vh-160px)] overflow-y-scroll'>
