@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import NavBar from "@/components/NavBar/NavBar"
-import NotificationButton from "@/components/Button/NotificationButton"
+// import NavBar from "@/components/NavBar/NavBar"
+// import NotificationButton from "@/components/Button/NotificationButton"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,7 +17,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    // Para ocultar el warning de hidratacion
+    <html lang="es" suppressHydrationWarning={true}>
       <body className={inter.className}>
         {/* <NavBar />
         <NotificationButton /> */}
