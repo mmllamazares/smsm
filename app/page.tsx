@@ -15,9 +15,9 @@ export default function Home() {
     border: '1px solid #fff',
   }
 
-  const [isActive, setIsActive] = useState(true)
+  const [isActive, setIsActive] = useState<boolean>(true)
 
-  function handleClick(e: any) {
+  function handleClick(e: Event) {
     e.stopPropagation()
     setIsActive(!isActive)
   }

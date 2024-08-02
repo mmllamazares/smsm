@@ -4,7 +4,7 @@ import Notification from '../Notification/Notification'
 import { MdNotifications, MdClose } from "react-icons/md"
 import { fails } from '@/utils/fails'
 
-const NotificationPanel = ({ isActive, handleClick }: any) => {
+const NotificationPanel = ({ isActive, handleClick }:{isActive: boolean, handleClick: any}) => {
 
   return (
     <div className={`absolute w-full h-screen ${isActive ? "invisible" : ""} z-10`} onClick={handleClick}>
@@ -12,7 +12,7 @@ const NotificationPanel = ({ isActive, handleClick }: any) => {
         e.stopPropagation()
       }}>
         <div className='relative h-screen'>
-          <h2 className='flex justify-center items-center m-6 font-Roboto-Bold text-blanco text-center ext-2xl'><MdNotifications /> Notificaciones</h2>
+          <h2 className='flex justify-center items-center m-6 font-Roboto-Bold text-blanco text-center text-2xl'><MdNotifications /> Notificaciones</h2>
           <div className='h-[calc(100vh-160px)] overflow-y-scroll'>
             {
               fails.map((fail, i) => (
