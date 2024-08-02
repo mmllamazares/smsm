@@ -1,11 +1,13 @@
-import React from 'react'
-import { MdNotifications } from "react-icons/md";
+import { MdNotifications } from "react-icons/md"
 
-const Button = ({handleClick}:any) => {
+const Button = ({ handleClick }: any) => {
   return (
-    <>
-        <button onClick={handleClick} className="absolute z-10 top-0 right-0 w-10 h-10 bg-blanco border-primary-blue border-2 shadow-md text-primary-blue  m-4 flex items-center justify-center"><MdNotifications/></button>
-    </>
+    <div className='right-0 z-10 absolute flex justify-center items-center w-10 h-10'>
+      <span className='z-20 flex justify-center items-center bg-primary-blue rounded-full w-5 h-5 font-bold text-[11px] text-white leading-normal select-none'>10</span>
+      <button onClick={handleClick} className="top-0 right-0 z-10 absolute flex justify-center items-center border-2 border-primary-blue bg-blanco shadow-md m-4 w-10 h-10 text-primary-blue">
+        <MdNotifications />
+      </button>
+    </div>
   )
 }
 
