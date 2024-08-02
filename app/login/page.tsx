@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Logo from "../../public/Logo.svg";
-import React from 'react'
 
 const Login = () => {
   return (
-    <div className='w-screen h-screen flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center w-80 gap-3 p-10 font-Roboto-Regular'>
+    <div className='flex justify-center items-center w-screen h-screen'>
+        <div className='flex flex-col justify-center items-center gap-3 p-10 w-80 font-Roboto-Regular'>
             <Image src={Logo} alt='Logo' width={250} height={250}/>
             <div className='flex flex-col items-start gap-3'>
                 <label htmlFor="user">Usuario:</label>

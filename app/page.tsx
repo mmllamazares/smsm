@@ -17,7 +17,7 @@ export default function Home() {
 
   const [isActive, setIsActive] = useState<boolean>(true)
 
-  function handleClick(e: Event) {
+  function handleClick(e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation()
     setIsActive(!isActive)
   }
