@@ -5,7 +5,7 @@
 import Button from '@/components/Button/Button'
 import NotificationPanel from '@/components/NotificationPanel/NotificationPanel'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
 
@@ -16,6 +16,11 @@ export default function Home() {
   }
 
   const [isActive, setIsActive] = useState<boolean>(true)
+  const [notifications, setNotifications] = useState([])
+
+  useEffect(() => {
+    // Aqui obtener las notificaciones cuando se carga el componente
+  }, [])
 
   function handleClick(e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation()
@@ -26,7 +31,7 @@ export default function Home() {
     <>
       <div className="relative w-screen min-h-screen">
 
-        <Button handleClick={handleClick} />
+        <Button handleClick={handleClick} cantNotifications={notifications.length} />
         <NotificationPanel isActive={isActive} handleClick={handleClick} />
         <Map position={[22.416724, -83.700273]} zoom={9.3} />
 
