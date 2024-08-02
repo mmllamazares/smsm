@@ -30,6 +30,12 @@
   display: none;
 }
 
+.not-found-page {
+  background-image: url(../public/not-found-img.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
 /* Zoom buttons */
 /* .leaflet-control-zoom {
   position: relative;
