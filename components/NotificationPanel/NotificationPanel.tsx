@@ -1,11 +1,11 @@
 'use client'
-import React from 'react'
+import React, { Dispatch, SetStateAction, useEffect } from 'react'
 import Notification from '../Notification/Notification'
 import { MdNotifications, MdClose } from "react-icons/md"
 import { fails } from '@/utils/fails'
 
-const NotificationPanel = ({ isActive, handleClick }:{isActive: boolean, handleClick: React.MouseEventHandler<HTMLElement>}) => {
-
+const NotificationPanel = ({ isActive, handleClick }: { isActive: boolean, handleClick: React.MouseEventHandler<HTMLElement> }) => {
+  
   return (
     <div className={`absolute w-full h-screen ${isActive ? "invisible" : ""} z-10`} onClick={handleClick}>
       <div className={`absolute ${isActive ? "invisible" : ""} right-0 h-screen w-96 bg-secondary-blue flex flex-col z-20`} onClick={(e) => {

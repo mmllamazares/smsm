@@ -16,22 +16,24 @@ export default function Home() {
   }
 
   const [isActive, setIsActive] = useState<boolean>(true)
-  const [notifications, setNotifications] = useState([])
-
-  useEffect(() => {
-    // Aqui obtener las notificaciones cuando se carga el componente
-  }, [])
+  const [cantNotifications, setCantNotifications] = useState(10)
 
   function handleClick(e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation()
     setIsActive(!isActive)
   }
 
+  useEffect(() => {
+    if (!isActive) {
+      setCantNotifications(0)
+    }
+  }, [isActive])
+
   return (
     <>
       <div className="relative w-screen min-h-screen">
 
-        <Button handleClick={handleClick} cantNotifications={notifications.length} />
+        <Button handleClick={handleClick} cantNotifications={cantNotifications} />
         <NotificationPanel isActive={isActive} handleClick={handleClick} />
         <Map position={[22.416724, -83.700273]} zoom={9.3} />
 
