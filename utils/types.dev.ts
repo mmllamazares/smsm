@@ -24,3 +24,9 @@ export type FailDetected = {
 export interface PropsDetailsFail {
   fail: FailDetected
 }
+
+// Prop del tipo de notificacion
+export type PropsNotificationCard = {
+  type: "success" | "error" | "warning" | "info"
+  description?: string
+};
