@@ -8,7 +8,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center w-screen h-screen">
-      <div className="flex flex-col justify-center items-center gap-3 p-10 w-80 font-Roboto-Regular">
+      <div className="flex flex-col items-center w-full max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 font-Roboto-Regular">
         <Image src={Logo} alt="Logo" width={250} height={250} priority={true} />
         {/* <div className='flex flex-col items-start gap-3'>
                 <label htmlFor="user">Usuario:</label>
@@ -68,7 +68,7 @@ const Login = () => {
             // type="submit"
             type="button"
             onClick={() => router.push("/")}
-            className="text-white bg-primary-blue hover:bg-secondary-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-primary-blue hover:bg-secondary-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Inicio de sesión
           </button>
