@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import Logo from "../../public/Logo.svg";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const router = useRouter();
+
   return (
     <div className="flex justify-center items-center w-screen h-screen">
       <div className="flex flex-col justify-center items-center gap-3 p-10 w-80 font-Roboto-Regular">
@@ -61,7 +65,9 @@ const Login = () => {
             </label>
           </div>
           <button
-            type="submit"
+            // type="submit"
+            type="button"
+            onClick={() => router.push("/")}
             className="text-white bg-primary-blue hover:bg-secondary-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Inicio de sesión

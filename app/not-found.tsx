@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function NotFound() {
+  //   await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
     <div className="not-found-page">
       <div className="flex flex-col justify-center items-center bg-zinc-500/50 w-screen h-screen">
