@@ -4,10 +4,8 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import { PropsMap } from "@/utils/types.dev";
-import Image from "next/image";
-import Link from "next/link";
 
-export default function MyMap(props: any) {
+export default function MyMap(props: PropsMap) {
   const { position, zoom } = props;
 
   return (

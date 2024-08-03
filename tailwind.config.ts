@@ -51,7 +51,9 @@ const config: Config = {
         "negro": "#2a3538",
         "gris":"#798b9d",
         "blanco": "#f3f5f1",
-        "extra": "#aca4b0"
+        "extra": "#aca4b0",
+        "error":"#d9534f",
+        "success":"#5cb85c",
       },
       fontFamily:{
         "Roboto-Bold": ['Roboto-Bold'],

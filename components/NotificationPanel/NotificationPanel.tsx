@@ -1,5 +1,4 @@
-"use client";
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React from "react";
 import Notification from "../Notification/Notification";
 import { MdNotifications, MdClose } from "react-icons/md";
 import { fails } from "@/utils/fails";
