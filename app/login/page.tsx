@@ -61,7 +61,7 @@ const Login = () => {
               htmlFor="remember"
               className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
-              Remember me
+              Recordar Contraseña
             </label>
           </div>
           <button
